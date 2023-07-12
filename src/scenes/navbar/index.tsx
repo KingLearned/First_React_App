@@ -5,7 +5,6 @@ import Link from "./Link";
 import { SelectedPage } from "@/shared/types";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import ActionButton from "@/shared/ActionButton";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 type Props = {
   isTopOfPage: boolean;
@@ -21,7 +20,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   
   return (
     <nav>
-      <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-30 w-full py-6`} >
+      <div className={`${navbarBackground} ${flexBetween} fixed top-0 z-[50] w-full py-6`} >
         <div className={`${flexBetween} mx-auto w-5/6`}>
           <div className={`${flexBetween} w-full gap-16`}>
             {/* LEFT SIDE */}
@@ -64,8 +63,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           <div className="ml-[33%] flex flex-col gap-10 text-2xl">
             <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
             <Link page="Benefits" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-            <Link page="Our Class" selectedPage={selectedPage} setSelectedPage={setSelectedPage} /> 
+            <Link page="Our Classes" selectedPage={selectedPage} setSelectedPage={setSelectedPage} /> 
             <Link page="Contact Us" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+            <a href="">Sign In</a>
           </div>
         </div>
       )}

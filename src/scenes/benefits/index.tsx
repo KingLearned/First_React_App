@@ -10,17 +10,17 @@ const benefits: Array<BenefitType> = [
   {
     icon: <HomeModernIcon className="h-6 w-6" />,
     title: "State of the Art Facilities",
-    description: "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+    description: "Our gym is equipped with top-notch facilities designed to provide you with the ultimate workout experience. From modern exercise equipment to spacious training areas, we prioritize your comfort and ensure that you have everything you need to achieve your fitness goals.",
   },
   {
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "100's of Diverse Classes",
-    description: "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+    description: "We offer a wide variety of fitness classes catering to different interests and fitness levels. Whether you're into high-intensity workouts, yoga, dance, or strength training, you'll find something that suits your preferences. ",
   },
   {
     icon: <AcademicCapIcon className="h-6 w-6" />,
     title: "Expert and Pro Trainers",
-    description: "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+    description: " Our team of experienced and certified trainers is dedicated to helping you reach your full potential. They possess extensive knowledge and expertise in various fitness disciplines, and they are committed to guiding and motivating you throughout your fitness journey.",
   },
 ];
 
@@ -64,7 +64,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           className="mt-5 items-center justify-between gap-8 md:flex"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.3 }}
           variants={container}
         >
           {benefits.map((benefit: BenefitType) => (
@@ -90,7 +90,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           {/* DESCRIPTION */}
           <div>
             {/* TITLE */}
-            <div className="relative">
+            <div className="relative overflow-hidden">
               <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
                 <motion.div
                   initial="hidden"
@@ -98,8 +98,8 @@ const Benefits = ({ setSelectedPage }: Props) => {
                   viewport={{ once: true, amount: 0.5 }}
                   transition={{ duration: 0.5 }}
                   variants={{
-                    hidden: { opacity: 0, x: 50 },
-                    visible: { opacity: 1, x: 0 },
+                    hidden: { opacity: 0, x: 150 },
+                    visible: { opacity: 1, x: 0 }
                   }}
                 >
                   <HText>
@@ -122,18 +122,11 @@ const Benefits = ({ setSelectedPage }: Props) => {
               }}
             >
               <p className="my-5">
-                Nascetur aenean massa auctor tincidunt. Iaculis potenti amet
-                egestas ultrices consectetur adipiscing ultricies enim. Pulvinar
-                fames vitae vitae quis. Quis amet vulputate tincidunt at in
-                nulla nec. Consequat sed facilisis dui sit egestas ultrices
-                tellus. Ullamcorper arcu id pretium sapien proin integer nisl.
-                Felis orci diam odio.
+                By joining our gym, you gain access to state-of-the-art facilities, a wide range of classes, and the expertise of our dedicated trainers. 
+                We are here to provide you with a supportive and empowering environment, helping you achieve your fitness goals and maintain a healthy lifestyle.
               </p>
               <p className="mb-5">
-                Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-                tellus quam porttitor. Mauris velit euismod elementum arcu neque
-                facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-                enim mattis odio in risus nunc.
+                Get ready to unleash your full potential and embark on a transformative fitness journey with us.
               </p>
             </motion.div>
 

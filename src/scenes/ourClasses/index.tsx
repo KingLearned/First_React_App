@@ -13,32 +13,32 @@ import Class from "./Class";
 const classes: Array<ClassType> = [
   {
     name: "Weight Training Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Join our weight training class to build strength, increase muscle tone, and improve overall body composition under the guidance of our skilled trainers.",
     image: image1,
   },
   {
     name: "Yoga Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Discover the physical and mental benefits of yoga as you enhance flexibility, balance, and inner peace through our rejuvenating yoga classes suitable for all levels of experience.",
     image: image2,
   },
   {
     name: "Ab Core Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Strengthen your core muscles and sculpt your abs with our dedicated ab core classes, designed to target your midsection and help you achieve a toned and defined core.",
     image: image3,
   },
   {
     name: "Adventure Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Experience the thrill of adventure in our exciting classes that combine fitness and outdoor activities, providing a unique and dynamic way to stay active and challenge yourself.",
     image: image4,
   },
   {
     name: "Fitness Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: " Our diverse range of fitness classes, including cardio, HIIT, dance, and more, offer an engaging and fun workout environment to improve cardiovascular endurance, burn calories, and boost your fitness levels.",
     image: image5,
   },
   {
     name: "Training Classes",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    description: "Take advantage of our specialized training classes led by expert trainers, tailored to specific fitness goals such as strength training, functional fitness, or sports-specific conditioning, to optimize your performance and achieve remarkable results.",
     image: image6,
   },
 ];
@@ -67,15 +67,12 @@ const OurClasses = ({ setSelectedPage }: Props) => {
           <div className="md:w-3/5">
             <HText>OUR CLASSES</HText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+              Our classes covers across divers types of body Fitness. they including the following: Weight Training Class, Yoga Class, Ab Core Class, Adventure Class, Fitness Class and Training class.
             </p>
           </div>
         </motion.div>
         <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+          <ul className="w-[2500px] whitespace-nowrap">
             {classes.map((item: ClassType, index) => (
               <Class
                 key={`${item.name}-${index}`}

@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ContactUs = ({ setSelectedPage }: Props) => {
-  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white outline-none`;
+  const inputStyles = `mb-5 w-full rounded-lg bg-primary-300 px-5 py-3 placeholder-white outline-gray-500`;
 
   const { register, trigger, formState: { errors }, } = useForm();
 
@@ -41,9 +41,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
             <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
           </HText>
           <p className="my-5">
-            Congue adipiscing risus commodo placerat. Tellus et in feugiat nisl
-            sapien vel rhoncus. Placerat at in enim pellentesque. Nulla
-            adipiscing leo egestas nisi elit risus sit. Nunc cursus sagittis.
+            Reach out to us to get started on your journey to fit the body into shape!. Fill the correct details into the contact field and we will get back to you within the next 30 minutes.
           </p>
         </motion.div>
 
@@ -54,7 +52,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           >
             <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e" method="POST">
 
-              <input className={inputStyles} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, }) } />
+              <input className={`${inputStyles}`} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, }) } />
               {errors.name && ( 
                 <p className="mt-1 text-primary-500">
                   {errors.name.type === "required" && "This field is required."}
