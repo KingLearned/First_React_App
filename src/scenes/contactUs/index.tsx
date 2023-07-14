@@ -50,7 +50,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           <motion.div className="mt-10 basis-3/5 md:mt-0" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }}
             variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
           >
-            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/chithomzzy@gmail.com" method="POST">
+            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/842a28ec38b89fd58393e815a2ad6d04" method="POST">
 
               <input className={`${inputStyles}`} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, }) } />
               {errors.name && ( 
