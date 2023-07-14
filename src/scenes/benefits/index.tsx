@@ -27,7 +27,7 @@ const benefits: Array<BenefitType> = [
 const container = {
   hidden: {},
   visible: {
-    transition: { staggerChildren: 0.2 },
+    transition: { staggerChildren: 0.3 },
   },
 };
 
@@ -37,7 +37,7 @@ type Props = {
 
 const Benefits = ({ setSelectedPage }: Props) => {
   return (
-    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
+    <section id="benefits" className="mx-auto min-h-full w-5/6 py-20 overflow-x-hidden">
       <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)} >
         {/* HEADER */}
         <motion.div
@@ -47,7 +47,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.5 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
+            hidden: { opacity: 0, x: -100 },
             visible: { opacity: 1, x: 0 },
           }}
         >
@@ -79,37 +79,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </motion.div>
 
         {/* GRAPHICS AND DESCRIPTION */}
-        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex">
+        <div className="mt-16 items-center justify-between gap-20 md:mt-28 md:flex ">
           {/* GRAPHIC */}
-          <img
-            className="mx-auto"
-            alt="benefits-page-graphic"
-            src={BenefitsPageGraphic}
-          />
-
+          <img className="mx-auto" alt="benefits-page-graphic" src={BenefitsPageGraphic} />
           {/* DESCRIPTION */}
           <div>
             {/* TITLE */}
-            <div className="relative overflow-hidden">
-              <div className="before:absolute before:-top-20 before:-left-20 before:z-[1] before:content-abstractwaves">
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.5 }}
-                  variants={{
-                    hidden: { opacity: 0, x: 150 },
-                    visible: { opacity: 1, x: 0 }
-                  }}
-                >
-                  <HText>
-                    MILLIONS OF HAPPY MEMBERS GETTING{" "}
-                    <span className="text-primary-500">FIT</span>
-                  </HText>
-                </motion.div>
-              </div>
-            </div>
-
+            <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }} variants={{ hidden: { opacity: 0, x: 150 }, visible: { opacity: 1, x: 0 } }}>
+              <HText>
+                MILLIONS OF HAPPY MEMBERS GETTING{" "} <span className="text-primary-500">FIT</span>
+              </HText>
+            </motion.div>
             {/* DESCRIPT */}
             <motion.div
               initial="hidden"
@@ -131,7 +111,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             </motion.div>
 
             {/* BUTTON */}
-            <div className="relative mt-16">
+            <div className="relative mt-16 ">
               <div className="before:absolute before:-bottom-20 before:right-40 before:z-[-1] before:content-sparkles">
                 <ActionButton setSelectedPage={setSelectedPage}>
                   Join Now

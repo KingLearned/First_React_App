@@ -38,7 +38,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           }}
         >
           <HText>
-            <span className="text-primary-500">JOIN NOW</span> TO GET IN SHAPE
+            <span className="text-primary-500">JOIN NOW </span> TO GET IN SHAPE
           </HText>
           <p className="my-5">
             Reach out to us to get started on your journey to fit the body into shape!. Fill the correct details into the contact field and we will get back to you within the next 30 minutes.
@@ -50,7 +50,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
           <motion.div className="mt-10 basis-3/5 md:mt-0" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.5 }}
             variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 } }}
           >
-            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/e8a5bdfa807605332f809e5656e27c6e" method="POST">
+            <form target="_blank" onSubmit={onSubmit} action="https://formsubmit.co/chithomzzy@gmail.com" method="POST">
 
               <input className={`${inputStyles}`} type="text" placeholder="NAME" {...register("name", { required: true, maxLength: 100, }) } />
               {errors.name && ( 
@@ -84,11 +84,12 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               </button>
             </form>
           </motion.div>
-
-          <motion.div className="relative mt-16 basis-2/5 md:mt-0" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ delay: 0.2, duration: 0.5 }} variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 }, }}>
-            <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1] md:before:content-evolvetext">
+          
+          <motion.div className="w-full before:absolute before:-bottom-20 before:-right-[90px] before:z-[-1] md:before:content-evolvetext
+          relative mt-16 basis-2/5 md:mt-0" 
+          initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.5 }} transition={{ delay: 0.2, duration: 0.6 }} variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0 }, }}>
               <img className="w-full" alt="contact-us-page-graphic" src={ContactUsPageGraphic} />
-            </div>
+            {/* </div> */}
           </motion.div>
         </div>
       </motion.div>
